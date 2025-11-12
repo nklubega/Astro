@@ -86,14 +86,81 @@ canvas#particles {
 .section {
   padding: 100px 10%;
   background: #140026;
+  align-content: center;
 }
+ section#about {
+  align-content: center;
+
+ }
 .section:nth-child(even) { background: #1c0036; }
-.services-list {
+/*.services-list {
   list-style: none; padding: 0;
 }
 .services-list li {
   margin: 10px 0; font-size: 1.1em;
+}*/
+
+/* ===== Horizontal Services Section ===== */
+.services-horizontal {
+  background: #faf8fc;
+  color: #333;
+  padding: 80px 10%;
 }
+.services-horizontal .section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #5c347c; /* adjust to your theme’s deep purple */
+  margin-bottom: 50px;
+  text-align: center;
+}
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+.service-tile {
+  flex: 1 1 calc(25% - 30px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+.service-tile .icon {
+  font-size: 2.5rem;
+  color: #b7357f; /* your pink/purple accent */
+  margin-bottom: 15px;
+}
+.service-tile h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #3b0f70; /* deep purple heading */
+}
+.service-tile p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6b6b7a;
+}
+
+@media (max-width: 1024px) {
+  .service-tile {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+@media (max-width: 640px) {
+  .service-tile {
+    flex: 1 1 100%;
+  }
+}
+
+
 /* ===== Portfolio Section ===== */
 .portfolio-section {
   padding: 100px 0;
@@ -169,6 +236,7 @@ canvas#particles {
     font-size: 1.8rem;
   }
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
