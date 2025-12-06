@@ -22,6 +22,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
@@ -71,4 +72,10 @@ window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   initParticles();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = GLightbox({
+    selector: '.portfolio-lightbox'
+  });
 });
