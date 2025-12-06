@@ -82,11 +82,18 @@ canvas#particles {
   text-decoration: none;
   transition: opacity 0.3s;
 }
+h2 {
+  align-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff8fff;
+}
 .btn:hover { opacity: 0.8; }
 .section {
   padding: 100px 10%;
   background: #140026;
   align-content: center;
+  text-align: center;
 }
  section#about {
   align-content: center;
@@ -182,7 +189,7 @@ canvas#particles {
 
 .portfolio-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
   padding: 0 20px;
 }
@@ -193,7 +200,11 @@ canvas#particles {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;   /* NEW — square box */
+  height: auto;          /* NEW */
 }
+
 
 .portfolio-item img {
   width: 100%;
@@ -204,7 +215,8 @@ canvas#particles {
 }
 
 .portfolio-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  animation: float 2s ease-in-out infinite;
 }
 
 .portfolio-item .overlay {
@@ -228,7 +240,7 @@ canvas#particles {
   opacity: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .portfolio-section {
     padding: 70px 0;
   }
@@ -278,4 +290,10 @@ footer {
   }
   .nav-links.open { display: flex; }
   .hamburger { display: block; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
