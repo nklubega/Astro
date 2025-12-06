@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Astro Creative Agency</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
   <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 </head>
 <body>
   <header id="navbar" class="transparent">
@@ -13,11 +17,14 @@
       <img src="assets/logo.png" alt="Astro Logo" class="logo">
       <nav>
         <ul class="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#h ome" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
+          <button id="theme-toggle" class="theme-toggle">
+          🌙
+          </button>
         </ul>
       </nav>
       <div class="hamburger">&#9776;</div>
@@ -30,7 +37,7 @@
       <img src="assets/logo.png" alt="Astro logo placeholder" class="logo2">
       <h1>Creative Energy, Cosmic Results.</h1>
       <p>Welcome to Astro Creative Agency — where creativity meets the cosmos.</p>
-      <a href="assets/Astro_Rate_Card.pdf" class="btn" download>Download Rate Card</a>
+      <a href="assets/Astro_Rate_Card.pdf" class="btn" target="_blank" download>Download Rate Card</a>
     </div>
   </section>
 
@@ -38,16 +45,6 @@
     <h2>About Us</h2>
     <p>Astro Creative Agency blends imagination, design, and digital artistry to elevate brands beyond the ordinary. We believe in creativity with purpose — crafting visuals and campaigns that resonate deeply and shine brilliantly.</p>
   </section>
-
- <!-- <section id="services" class="section">
-    <h2>Our Services</h2>
-    <ul class="services-list">
-      <li>🎨 Branding & Design</li>
-      <li>📸 Photography & Visual Direction</li>
-      <li>💻 Web Design & Development</li>
-      <li>📢 Digital Marketing & Social Media Strategy</li>
-    </ul>
-  </section>-->
 
   <section id="services" class="section services-horizontal">
   <div class="container">
@@ -77,7 +74,6 @@
   </div>
 </section>
 
-
  <section id="portfolio" class="portfolio-section">
   <div class="container">
     <h2 class="section-title">Our Portfolio</h2>
@@ -85,18 +81,22 @@
 
     <div class="portfolio-gallery">
       <div class="portfolio-item">
+        <a href="assets/portfolio/blended.png" class="portfolio-lightbox">
         <img src="assets/portfolio/blended.png" alt="Bridal Makeup">
         <div class="overlay"><span>Creative Design</span></div>
       </div>
       <div class="portfolio-item">
+        <a href="assets/portfolio/clothing.jpg" class="portfolio-lightbox">
         <img src="assets/portfolio/clothing.jpg" alt="Photoshoot Look">
         <div class="overlay"><span>Fashion Shop</span></div>
       </div>
       <div class="portfolio-item">
+        <a href="assets/portfolio/Makeup.jpg" class="portfolio-lightbox">
         <img src="assets/portfolio/Makeup.jpg" alt="Cultural Attire">
         <div class="overlay"><span>Makeup Shop</span></div>
       </div>
       <div class="portfolio-item">
+        <a href="assets/portfolio/Ubuhle.jpg" class="portfolio-lightbox">
         <img src="assets/portfolio/Ubuhle.jpg" alt="Event Décor">
         <div class="overlay"><span>Beauty Shop</span></div>
       </div>
@@ -128,5 +128,8 @@
   </footer>
 
   <button id="scrollTopBtn" title="Go to top">⬆</button>
+
+  
+
 </body>
 </html>
