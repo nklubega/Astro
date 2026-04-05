@@ -1,135 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Astro Creative Agency</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASTRO Creative Agency</title>
+  <meta
+    name="description"
+    content="ASTRO Creative Agency helps businesses stand out through graphics design and modern website design."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header id="navbar" class="transparent">
-    <div class="nav-container">
-      <img src="assets/logo.png" alt="Astro Logo" class="logo">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#h ome" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <button id="theme-toggle" class="theme-toggle">
-          🌙
-          </button>
-        </ul>
-      </nav>
-      <div class="hamburger">&#9776;</div>
-    </div>
+  <header class="site-header" id="top">
+    <nav class="navbar container">
+      <a href="#top" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">ASTRO</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-sm">Start a Project</a>
+      </div>
+    </nav>
   </header>
 
-  <section id="home" class="hero">
-    <canvas id="particles"></canvas>
-    <div class="hero-content">
-      <img src="assets/logo.png" alt="Astro logo placeholder" class="logo2">
-      <h1>Creative Energy, Cosmic Results.</h1>
-      <p>Welcome to Astro Creative Agency — where creativity meets the cosmos.</p>
-      <a href="assets/Astro_Rate_Card.pdf" class="btn" target="_blank" download>Download Rate Card</a>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg parallax" data-speed="0.12"></div>
+      <div class="hero-grid parallax" data-speed="0.18"></div>
+      <div class="hero-orb orb-1 parallax" data-speed="0.24"></div>
+      <div class="hero-orb orb-2 parallax" data-speed="0.20"></div>
+      <div class="hero-orb orb-3 parallax" data-speed="0.28"></div>
+      <canvas id="starsCanvas"></canvas>
+
+      <div class="hero-content container">
+        <p class="eyebrow reveal">ASTRO Creative Agency</p>
+        <h1 class="reveal">
+          Designing bold brands and modern websites that help businesses stand out.
+        </h1>
+        <p class="hero-text reveal">
+          We help businesses look professional, memorable, and ready for growth
+          through high-quality graphics design and website design.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#services" class="btn">Explore Services</a>
+          <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="stat-card glass-card">
+            <strong>Graphics Design</strong>
+            <span>Brand identity, social media creatives, print-ready visuals</span>
+          </div>
+          <div class="stat-card glass-card">
+            <strong>Website Design</strong>
+            <span>Responsive business websites, landing pages, portfolio sites</span>
+          </div>
+          <div class="stat-card glass-card">
+            <strong>Built to Scale</strong>
+            <span>Starting focused, then expanding into a wider creative studio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-strip">
+      <div class="container intro-strip-inner reveal">
+        <p>
+          ASTRO is a creative agency focused on two core services:
+          <strong>graphics design</strong> and <strong>website design</strong>.
+          We help businesses build strong first impressions and better digital presence.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About ASTRO</p>
+          <h2>Creative energy with strategic execution</h2>
+          <p>
+            ASTRO Creative Agency is built for businesses that want more than just
+            attractive visuals. We create design systems and digital experiences
+            that make brands look sharper, more credible, and more competitive.
+          </p>
+          <p>
+            We are starting with our strongest foundation — graphics design and
+            website design — then scaling into broader creative and digital services
+            as the agency grows.
+          </p>
+        </div>
+
+        <div class="about-cards reveal">
+          <article class="glass-card feature-card">
+            <span class="card-kicker">01</span>
+            <h3>Brand-first thinking</h3>
+            <p>
+              We create visuals that help businesses feel professional and memorable.
+            </p>
+          </article>
+
+          <article class="glass-card feature-card">
+            <span class="card-kicker">02</span>
+            <h3>Modern web design</h3>
+            <p>
+              Clean, responsive websites built to present businesses clearly and confidently.
+            </p>
+          </article>
+
+          <article class="glass-card feature-card">
+            <span class="card-kicker">03</span>
+            <h3>Built for growth</h3>
+            <p>
+              Our foundation is focused, but our long-term direction is a full creative growth studio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2>Focused services for businesses that want to look professional</h2>
+          <p>
+            We currently specialize in graphics design and website design —
+            the two services that help businesses build a stronger visual identity
+            and a better online presence.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card glass-card reveal">
+            <span class="service-number">01</span>
+            <h3>Graphics Design</h3>
+            <p>
+              Professional visual design for brands, marketing, and business communication.
+            </p>
+            <ul>
+              <li>Logo design</li>
+              <li>Brand identity kits</li>
+              <li>Posters & flyers</li>
+              <li>Social media design</li>
+              <li>Business cards</li>
+              <li>Company profiles</li>
+              <li>Brochures & catalogues</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass-card reveal">
+            <span class="service-number">02</span>
+            <h3>Website Design</h3>
+            <p>
+              Modern websites that help businesses present themselves clearly and attract customers.
+            </p>
+            <ul>
+              <li>Business websites</li>
+              <li>Landing pages</li>
+              <li>Portfolio websites</li>
+              <li>Responsive design</li>
+              <li>UI-focused layouts</li>
+              <li>Website refresh/redesign</li>
+              <li>Deployment support</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass-card reveal">
+            <span class="service-number">03</span>
+            <h3>Starter Packages</h3>
+            <p>
+              Bundled offers for businesses that want a faster and more complete launch.
+            </p>
+            <ul>
+              <li>Logo + social posts</li>
+              <li>Brand kit + business card</li>
+              <li>Brand + website package</li>
+              <li>Basic launch support</li>
+              <li>Ideal for startups & SMEs</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="parallax-band">
+      <div class="parallax-band-image parallax" data-speed="0.15"></div>
+      <div class="parallax-band-overlay container">
+        <div class="band-content glass-card reveal">
+          <p class="eyebrow">Design that moves</p>
+          <h2>Creative work should do more than look nice — it should build trust.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h2>Selected creative directions and project styles</h2>
+          <p>
+            These sample works represent the style, quality, and direction ASTRO is building toward.
+          </p>
+        </div>
+
+        <div class="portfolio-filter reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="social">Social Design</button>
+          <button class="filter-btn" data-filter="web">Web Design</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal" data-category="branding">
+            <div class="portfolio-image gradient-1"></div>
+            <div class="portfolio-info glass-card">
+              <span>Branding</span>
+              <h3>Identity Concept</h3>
+              <p>Logo direction, color system, and visual style exploration.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-category="social">
+            <div class="portfolio-image gradient-2"></div>
+            <div class="portfolio-info glass-card">
+              <span>Social Design</span>
+              <h3>Campaign Visuals</h3>
+              <p>Promotional social graphics for a modern product launch.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-category="web">
+            <div class="portfolio-image gradient-3"></div>
+            <div class="portfolio-info glass-card">
+              <span>Web Design</span>
+              <h3>Business Website</h3>
+              <p>Clean, responsive web layout for a service-based company.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-category="branding">
+            <div class="portfolio-image gradient-4"></div>
+            <div class="portfolio-info glass-card">
+              <span>Branding</span>
+              <h3>Corporate Visual Kit</h3>
+              <p>Structured visual identity for a growing professional brand.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-category="web">
+            <div class="portfolio-image gradient-5"></div>
+            <div class="portfolio-info glass-card">
+              <span>Web Design</span>
+              <h3>Landing Page Concept</h3>
+              <p>Focused conversion layout with strong hierarchy and clarity.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal" data-category="social">
+            <div class="portfolio-image gradient-6"></div>
+            <div class="portfolio-info glass-card">
+              <span>Social Design</span>
+              <h3>Promo Series</h3>
+              <p>Consistent content design for campaigns and brand awareness.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Process</p>
+          <h2>How we work</h2>
+          <p>
+            A clear and collaborative process helps us deliver stronger work and smoother client experience.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card glass-card reveal">
+            <span class="process-step">01</span>
+            <h3>Discovery</h3>
+            <p>We understand your brand, goals, audience, and project needs.</p>
+          </article>
+
+          <article class="process-card glass-card reveal">
+            <span class="process-step">02</span>
+            <h3>Concept</h3>
+            <p>We develop visual directions and structure the project clearly.</p>
+          </article>
+
+          <article class="process-card glass-card reveal">
+            <span class="process-step">03</span>
+            <h3>Design</h3>
+            <p>We build polished graphics or website layouts with attention to detail.</p>
+          </article>
+
+          <article class="process-card glass-card reveal">
+            <span class="process-step">04</span>
+            <h3>Refine</h3>
+            <p>We review, improve, and align the final work with your feedback.</p>
+          </article>
+
+          <article class="process-card glass-card reveal">
+            <span class="process-step">05</span>
+            <h3>Deliver</h3>
+            <p>We prepare clean final files or launch-ready website deliverables.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box glass-card reveal">
+          <p class="eyebrow">Start Your Project</p>
+          <h2>Need branding, graphics, or a better website?</h2>
+          <p>
+            Let’s create something that helps your business look more professional
+            and attract the right attention.
+          </p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn">Let’s Talk</a>
+            <a href="assets/rate-card.pdf" class="btn btn-outline" download>Download Rate Card</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build your next creative project</h2>
+          <p>
+            Tell us what you need — whether it is graphics design, a brand refresh,
+            or a new website. We’ll help shape the right direction.
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:astrocreative9@gmail.com">astrocreative9@gmail.com</a>
+            <a href="tel:+256706965091">+256 706 965091</a>
+            <a href="https://wa.me/256706965091" target="_blank" rel="noopener noreferrer">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <form
+          class="contact-form glass-card reveal"
+          id="contactForm"
+          action="https://formspree.io/f/mqawkwqe"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" class="optionss" required>
+              <option value="">Select a service</option>
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Website Design">Website Design</option>
+              <option value="Brand + Website Package">Brand + Website Package</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your business and what you need..."
+              required
+            ></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New ASTRO website inquiry" />
+          <input type="hidden" name="_replyto" value="" />
+
+          <button type="submit" class="btn">Send Inquiry</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ASTRO Creative Agency. All rights reserved.</p>
+      <a href="#top">Back to top</a>
     </div>
-  </section>
-
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Astro Creative Agency blends imagination, design, and digital artistry to elevate brands beyond the ordinary. We believe in creativity with purpose — crafting visuals and campaigns that resonate deeply and shine brilliantly.</p>
-  </section>
-
-  <section id="services" class="section services-horizontal">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <div class="services-row">
-      <div class="service-tile">
-        <div class="icon">🎨</div>
-        <h3>Print Designs</h3>
-        <p>Business cards • Posters & Flyers • Banners • Brochures • Product catalogues</p>
-      </div>
-      <div class="service-tile">
-        <div class="icon">💻</div>
-        <h3>Digital Designs</h3>
-        <p>Instagram/FB posts • Logo & Brand Kits • Website (per page) • Full brand package</p>
-      </div>
-     <!-- <div class="service-tile">
-        <div class="icon">🔧</div>
-        <h3>Branding & Strategy</h3>
-        <p>Brand identity consulting • Visual language • Color & typography systems</p>
-      </div>-->
-      <div class="service-tile">
-        <div class="icon">🌐</div>
-        <h3>Web Design & Development</h3>
-        <p>Responsive sites • Landing pages • UX/UI design • Deployment and maintenance</p>
-      </div>
-    </div>
-  </div>
-</section>
-
- <section id="portfolio" class="portfolio-section">
-  <div class="container">
-    <h2 class="section-title">Our Portfolio</h2>
-    <p class="section-subtitle">A glimpse of our creative work — from makeup artistry to décor and fashion.</p>
-
-    <div class="portfolio-gallery">
-      <div class="portfolio-item">
-        <a href="assets/portfolio/blended.png" class="portfolio-lightbox">
-        <img src="assets/portfolio/blended.png" alt="Bridal Makeup">
-        <div class="overlay"><span>Creative Design</span></div>
-      </div>
-      <div class="portfolio-item">
-        <a href="assets/portfolio/clothing.jpg" class="portfolio-lightbox">
-        <img src="assets/portfolio/clothing.jpg" alt="Photoshoot Look">
-        <div class="overlay"><span>Fashion Shop</span></div>
-      </div>
-      <div class="portfolio-item">
-        <a href="assets/portfolio/Makeup.jpg" class="portfolio-lightbox">
-        <img src="assets/portfolio/Makeup.jpg" alt="Cultural Attire">
-        <div class="overlay"><span>Makeup Shop</span></div>
-      </div>
-      <div class="portfolio-item">
-        <a href="assets/portfolio/Ubuhle.jpg" class="portfolio-lightbox">
-        <img src="assets/portfolio/Ubuhle.jpg" alt="Event Décor">
-        <div class="overlay"><span>Beauty Shop</span></div>
-      </div>
-      <!--<div class="portfolio-item">
-        <img src="assets/portfolio/fashion2.jpg" alt="Custom Dress">
-        <div class="overlay"><span>Custom Dress</span></div>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/portfolio/decor2.jpg" alt="Table Setting">
-        <div class="overlay"><span>Table Setting</span></div>-->
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <section id="contact" class="section contact-section">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mqawkwqe" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Astro Creative Agency. All rights reserved.</p>
   </footer>
 
-  <button id="scrollTopBtn" title="Go to top">⬆</button>
-
-  
-
+  <script src="script.js"></script>
 </body>
 </html>
