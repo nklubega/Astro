@@ -52,7 +52,7 @@ window.addEventListener("scroll", updateParallax, { passive: true });
 updateParallax();
 
 // Portfolio filter
-const filterButtons = document.querySelectorAll(".filter-btn");
+/**const filterButtons = document.querySelectorAll(".filter-btn");
 const portfolioCards = document.querySelectorAll(".portfolio-card");
 
 filterButtons.forEach((button) => {
@@ -72,6 +72,131 @@ filterButtons.forEach((button) => {
       }
     });
   });
+});
+**/
+
+// ========================================
+// PORTFOLIO FILTER
+// ========================================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+
+    const filter = button.dataset.filter;
+
+    // Update active button
+    filterButtons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    // Filter projects
+    portfolioCards.forEach((card) => {
+
+      const category = card.dataset.category;
+
+      if (filter === "all" || category === filter) {
+        card.classList.remove("hidden");
+
+        // Small animation when appearing
+        card.style.animation = "portfolioFadeIn 0.4s ease";
+
+      } else {
+        card.classList.add("hidden");
+      }
+
+    });
+
+  });
+});
+
+
+// ========================================
+// PORTFOLIO MODAL
+// ========================================
+
+const portfolioModal = document.querySelector(".portfolio-modal");
+const modalImage = document.querySelector(".portfolio-modal-image img");
+const modalTitle = document.getElementById("portfolioModalTitle");
+const modalDescription = document.getElementById("portfolioModalDescription");
+const modalCategory = document.getElementById("portfolioModalCategory");
+const modalClose = document.querySelector(".portfolio-modal-close");
+const modalBackdrop = document.querySelector(".portfolio-modal-backdrop");
+
+
+// Open project
+portfolioCards.forEach((card) => {
+
+  card.addEventListener("click", () => {
+
+    const image = card.dataset.image;
+    const title = card.dataset.title;
+    const description = card.dataset.description;
+
+    const categoryElement = card.querySelector(
+      ".portfolio-info span"
+    );
+
+    const category = categoryElement
+      ? categoryElement.textContent
+      : "";
+
+    modalImage.src = image;
+    modalImage.alt = title;
+
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalCategory.textContent = category;
+
+    portfolioModal.classList.add("active");
+    portfolioModal.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+});
+
+
+// Close modal
+function closePortfolioModal() {
+
+  portfolioModal.classList.remove("active");
+  portfolioModal.setAttribute("aria-hidden", "true");
+
+  document.body.style.overflow = "";
+
+}
+
+
+// Close button
+modalClose.addEventListener(
+  "click",
+  closePortfolioModal
+);
+
+
+// Click outside modal
+modalBackdrop.addEventListener(
+  "click",
+  closePortfolioModal
+);
+
+
+// ESC key
+document.addEventListener("keydown", (event) => {
+
+  if (
+    event.key === "Escape" &&
+    portfolioModal.classList.contains("active")
+  ) {
+    closePortfolioModal();
+  }
+
 });
 
 // Contact form demo handler
