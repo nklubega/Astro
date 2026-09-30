@@ -142,8 +142,8 @@
           <p class="eyebrow">Services</p>
           <h2>Focused services for businesses that want to look professional</h2>
           <p>
-            We specialize in graphics design and website design —
-            two services that help businesses build a stronger visual identity
+            We currently specialize in graphics design and website design —
+            the two services that help businesses build a stronger visual identity
             and a better online presence.
           </p>
         </div>
@@ -211,7 +211,7 @@
       </div>
     </section>
 
-    <section class="section" id="portfolio">
+ <!--   <section class="section" id="portfolio">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Portfolio</p>
@@ -285,8 +285,194 @@
         </div>
       </div>
     </section>
+  -->
+  
+    <div class="portfolio-filter reveal">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="branding">Branding</button>
+  <button class="filter-btn" data-filter="social">Social Design</button>
+  <button class="filter-btn" data-filter="web">Web Design</button>
+</div>
 
-    <section class="section section-dark" id="process">
+<div class="portfolio-grid">
+
+  <!-- Project 1 -->
+  <article
+    class="portfolio-card reveal"
+    data-category="branding"
+    data-title="Identity Concept"
+    data-description="A complete visual identity exploration including logo direction, typography, color system and brand applications."
+    data-image="assets\images\clothing.webp"
+  >
+    <div class="portfolio-image">
+      <img src="assets\images\clothing.webp" alt="Identity Concept branding project"
+       loading="eager"
+  decoding="async">
+      <div class="portfolio-overlay">
+        <span>View Project</span>
+      </div>
+    </div>
+
+    <div class="portfolio-info glass-card">
+      <span>Branding</span>
+      <h3>Identity Concept</h3>
+      <p>Logo direction, color system, and visual style exploration.</p>
+    </div>
+  </article>
+
+
+  <!-- Project 2 -->
+  <article
+    class="portfolio-card reveal"
+    data-category="social"
+    data-title="Campaign Visuals"
+    data-description="A social media campaign created to promote a modern product launch across multiple digital platforms."
+    data-image="assets\images\FINAL1.webp"
+  >
+    <div class="portfolio-image">
+      <img src="assets\images\FINAL1.webp" alt="Campaign social media design"
+       loading="lazy"
+  decoding="async">
+      <div class="portfolio-overlay">
+        <span>View Project</span>
+      </div>
+    </div>
+
+    <div class="portfolio-info glass-card">
+      <span>Social Design</span>
+      <h3>Campaign Visuals</h3>
+      <p>Promotional social graphics for a modern product launch.</p>
+    </div>
+  </article>
+
+
+  <!-- Project 3 -->
+  <article
+    class="portfolio-card reveal"
+    data-category="web"
+    data-title="Business Website"
+    data-description="A responsive business website focused on clear navigation, strong visual hierarchy and conversion."
+    data-image="assets\images\ubuhle.jpg"
+  >
+    <div class="portfolio-image">
+      <img src="assets\images\ubuhle.jpg" alt="Business website design" 
+       loading="lazy"
+  decoding="async">
+      <div class="portfolio-overlay">
+        <span>View Project</span>
+      </div>
+    </div>
+
+    <div class="portfolio-info glass-card">
+      <span>Web Design</span>
+      <h3>Business Website</h3>
+      <p>Clean, responsive web layout for a service-based company.</p>
+    </div>
+  </article>
+
+
+  <!-- Project 4 -->
+  <article
+    class="portfolio-card reveal"
+    data-category="branding"
+    data-title="Corporate Visual Kit"
+    data-description="A structured visual identity system designed for a growing professional brand."
+    data-image="assets\images\LOGO1.webp"
+  >
+    <div class="portfolio-image">
+      <img src="assets\images\LOGO1.webp" alt="Corporate branding project"
+       loading="lazy"
+  decoding="async">
+      <div class="portfolio-overlay">
+        <span>View Project</span>
+      </div>
+    </div>
+
+    <div class="portfolio-info glass-card">
+      <span>Branding</span>
+      <h3>Corporate Visual Kit</h3>
+      <p>Structured visual identity for a growing professional brand.</p>
+    </div>
+  </article>
+
+
+  <!-- Project 5 -->
+  <article
+    class="portfolio-card reveal"
+    data-category="web"
+    data-title="Landing Page Concept"
+    data-description="A focused landing page designed around hierarchy, usability and conversion."
+    data-image="assets\images\ubuhle1.webp"
+  >
+    <div class="portfolio-image">
+      <img src="assets\images\ubuhle1.webp" alt="Landing page web design"
+       loading="lazy"
+      decoding="async">
+      <div class="portfolio-overlay">
+        <span>View Project</span>
+      </div>
+    </div>
+
+    <div class="portfolio-info glass-card">
+      <span>Web Design</span>
+      <h3>Landing Page Concept</h3>
+      <p>Focused conversion layout with strong hierarchy and clarity.</p>
+    </div>
+  </article>
+
+
+  <!-- Project 6 -->
+  <article
+    class="portfolio-card reveal"
+    data-category="social"
+    data-title="Promo Series"
+    data-description="A consistent collection of social media graphics developed for promotional campaigns and brand awareness."
+    data-image="assets\images\ubuhle1.webp"
+  >
+    <div class="portfolio-image">
+      <img src="assets\images\ubuhle1.webp" alt="Social media promotional design"   loading="lazy"
+  decoding="async">
+      <div class="portfolio-overlay">
+        <span>View Project</span>
+      </div>
+    </div>
+
+    <div class="portfolio-info glass-card">
+      <span>Social Design</span>
+      <h3>Promo Series</h3>
+      <p>Consistent content design for campaigns and brand awareness.</p>
+    </div>
+  </article>
+
+</div>
+
+
+<!-- Portfolio modal -->
+<div class="portfolio-modal" aria-hidden="true">
+
+  <div class="portfolio-modal-backdrop"></div>
+
+  <div class="portfolio-modal-content">
+
+    <button class="portfolio-modal-close" aria-label="Close project">
+      &times;
+    </button>
+
+    <div class="portfolio-modal-image">
+      <img src="" alt="">
+    </div>
+
+    <div class="portfolio-modal-info">
+      <span id="portfolioModalCategory"></span>
+      <h2 id="portfolioModalTitle"></h2>
+      <p id="portfolioModalDescription"></p>
+    </div>
+
+  </div>
+
+</div>
+  
+  <section class="section section-dark" id="process">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Process</p>
